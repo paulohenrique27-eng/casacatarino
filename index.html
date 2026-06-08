@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Casa Catarino</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
 
-    <img src="logo.png" class="logo">
+    <img src="logo.png" alt="Casa Catarino" class="logo">
 
     <div class="mesa">
         <span>MESA</span>
@@ -20,33 +22,122 @@
 
     <h2>Selecione uma opção</h2>
 
-    <!-- TROCAR PELO LINK DO SAIPOS -->
-    <a class="botao" href="LINK_DO_SAIPOS">
+    <!-- PEDIDO -->
+    <a id="btnPedido" class="botao" href="#">
         Fazer Pedido
     </a>
 
-    <!-- TROCAR PELO LINK DO GOOGLE -->
-    <a class="botao" href="LINK_DO_GOOGLE_AVALIACOES">
+    <!-- GOOGLE -->
+    <a
+        class="botao"
+        href="COLE_AQUI_O_LINK_DAS_AVALIACOES"
+        target="_blank"
+    >
         Avalie-nos
     </a>
 
     <!-- OPCIONAL -->
-    <a class="botao" href="LINK_DA_PROMOCAO_DO_CHOPP">
+    <a
+        class="botao"
+        href="COLE_AQUI_O_LINK_DA_PROMOCAO"
+        target="_blank"
+    >
         Ganhe um Chopp
     </a>
 
-    <img src="simbolo.png" class="simbolo">
+    <img src="simbolo.png" alt="Símbolo Casa Catarino" class="simbolo">
 
 </div>
 
 <script>
 
+// ==============================
+// LINKS DOS PEDIDOS POR MESA
+// ==============================
+
+const pedidos = {
+
+    "01": "LINK_MESA_01",
+    "02": "LINK_MESA_02",
+    "03": "LINK_MESA_03",
+    "04": "LINK_MESA_04",
+    "05": "LINK_MESA_05",
+
+    "06": "LINK_MESA_06",
+    "07": "LINK_MESA_07",
+    "08": "LINK_MESA_08",
+    "09": "LINK_MESA_09",
+    "10": "LINK_MESA_10",
+
+    "11": "LINK_MESA_11",
+    "12": "LINK_MESA_12",
+    "13": "LINK_MESA_13",
+    "14": "LINK_MESA_14",
+    "15": "LINK_MESA_15",
+
+    "16": "LINK_MESA_16",
+    "17": "LINK_MESA_17",
+    "18": "LINK_MESA_18",
+    "19": "LINK_MESA_19",
+    "20": "LINK_MESA_20",
+
+    "21": "LINK_MESA_21",
+    "22": "LINK_MESA_22",
+    "23": "LINK_MESA_23",
+    "24": "LINK_MESA_24",
+    "25": "LINK_MESA_25",
+
+    "26": "LINK_MESA_26",
+    "27": "LINK_MESA_27",
+    "28": "LINK_MESA_28",
+    "29": "LINK_MESA_29",
+    "30": "LINK_MESA_30",
+
+    "31": "LINK_MESA_31",
+    "32": "LINK_MESA_32",
+    "33": "LINK_MESA_33",
+    "34": "LINK_MESA_34",
+    "35": "LINK_MESA_35",
+
+    "36": "LINK_MESA_36",
+    "37": "LINK_MESA_37",
+    "38": "LINK_MESA_38",
+    "39": "LINK_MESA_39",
+    "40": "LINK_MESA_40",
+
+    "41": "LINK_MESA_41",
+    "42": "LINK_MESA_42",
+    "43": "LINK_MESA_43",
+    "44": "LINK_MESA_44",
+    "45": "LINK_MESA_45",
+
+    "46": "LINK_MESA_46",
+    "47": "LINK_MESA_47",
+    "48": "LINK_MESA_48",
+    "49": "LINK_MESA_49",
+    "50": "LINK_MESA_50"
+
+};
+
+// ==============================
+// IDENTIFICA A MESA
+// ==============================
+
 const params = new URLSearchParams(window.location.search);
 
 const mesa = params.get("mesa");
 
-if(mesa){
+if (mesa) {
+
     document.getElementById("mesaNumero").innerText = mesa;
+
+    if (pedidos[mesa]) {
+
+        document.getElementById("btnPedido").href =
+            pedidos[mesa];
+
+    }
+
 }
 
 </script>
