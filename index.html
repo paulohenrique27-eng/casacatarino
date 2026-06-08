@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Catarino</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <img src="logo.png" class="logo">
+
+    <div class="mesa">
+        <span>MESA</span>
+        <h1 id="mesaNumero">01</h1>
+    </div>
+
+    <h2>Selecione uma opção</h2>
+
+    <!-- TROCAR PELO LINK DO SAIPOS -->
+    <a class="botao" href="LINK_DO_SAIPOS">
+        Fazer Pedido
+    </a>
+
+    <!-- TROCAR PELO LINK DO GOOGLE -->
+    <a class="botao" href="LINK_DO_GOOGLE_AVALIACOES">
+        Avalie-nos
+    </a>
+
+    <!-- OPCIONAL -->
+    <a class="botao" href="LINK_DA_PROMOCAO_DO_CHOPP">
+        Ganhe um Chopp
+    </a>
+
+    <img src="simbolo.png" class="simbolo">
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const mesa = params.get("mesa");
+
+if(mesa){
+    document.getElementById("mesaNumero").innerText = mesa;
+}
+
+</script>
+
+</body>
+</html>
